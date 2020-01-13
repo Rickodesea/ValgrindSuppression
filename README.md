@@ -7,9 +7,10 @@ Valgrind detects these errors whenever you run it on any program that uses OpenG
 any errors you can fix because they are built into the API (the API may be designed that way).
 The most that can be done is to suppress the errors, that is, hide them.
 
-- os       : linux
-- api      : opengl
-- valgrind : [https://valgrind.org/](https://valgrind.org/)
+- os        : linux
+- api       : opengl
+- valgrind  : [https://valgrind.org/](https://valgrind.org/)
+- framework : [SDL](https://www.libsdl.org/)
 
 ## License
 This project is licensed under the Zlib License - see the [eula.txt](eula.txt) file for details.
