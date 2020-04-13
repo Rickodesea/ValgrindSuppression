@@ -68,7 +68,7 @@
 }
 
 {
-  sdl_leak_definite
+   sdl_leak_definite
    Memcheck:Leak
    match-leak-kinds: definite
    ...
@@ -135,3 +135,51 @@
    obj:/usr/lib/x86_64-linux-gnu/libGLX.so.*
    ...
 }
+
+{
+   LinuxDriLibraries_Addr2
+   Memcheck:Addr2
+   ...
+   obj:/usr/lib/x86_64-linux-gnu/dri/iris_dri.so
+   ...
+}
+
+{
+   LinuxDriLibraries_Addr4
+   Memcheck:Addr4
+   ...
+   obj:/usr/lib/x86_64-linux-gnu/dri/iris_dri.so
+   ...
+}
+
+{
+   LinuxDriLibraries_Addr8
+   Memcheck:Addr8
+   ...
+   obj:/usr/lib/x86_64-linux-gnu/dri/iris_dri.so
+   ...
+}
+
+{
+   LinuxDriLibraries_Leak_Reachable
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   obj:/usr/lib/x86_64-linux-gnu/dri/iris_dri.so
+   ...
+}
+
+# SDL uses memory hacks where it passes pointers to local allocated data
+# Valgrind detect these as leaks because we do not free
+# One example is SDL_GetErrBuf
+{
+   SDL_MemHack_GetErrBuf
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   fun:SDL_GetErrBuf
+   ...
+}
+
+
+
