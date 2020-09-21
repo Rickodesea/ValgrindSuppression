@@ -1,3 +1,7 @@
+## 3.0.1
+- changed eula.txt to LICENSE
+- edited README.md
+
 ## 3.0.0
 - added a demo
 	- SDLDemo.c

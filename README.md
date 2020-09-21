@@ -22,7 +22,7 @@ The 'C' file only just open an OpenGL window via SDL and glad.  It allows you to
 therefore suppress those errors.
 
 ## License
-This project is licensed under the Zlib License - see the [eula.txt](eula.txt) file for details.
+This project is licensed under the zlib License - see the [LICENSE](LICENSE) file for details.
 
 ## Resources
 - [Valgrind Suppression File Howto](https://wiki.wxwidgets.org/Valgrind_Suppression_File_Howto)
