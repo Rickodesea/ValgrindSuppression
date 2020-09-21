@@ -181,5 +181,25 @@
    ...
 }
 
+{
+   Linux_Internal_Leak_malloc_libLLVM
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/x86_64-linux-gnu/libLLVM-10.so.1
+   ...
+}
+
+{
+   Linux_Internal_Leak__Znwm_libLLVM
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:_Znwm
+   obj:/usr/lib/x86_64-linux-gnu/libLLVM-10.so.1
+   ...
+}
+
+
+
 
 
